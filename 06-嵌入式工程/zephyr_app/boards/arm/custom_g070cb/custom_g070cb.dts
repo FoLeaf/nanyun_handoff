@@ -1,0 +1,83 @@
+/dts-v1/;
+#include <st/g0/stm32g070Xb.dtsi>
+#include <st/g0/stm32g070cbtx-pinctrl.dtsi>
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	model = "Custom STM32G070CBT6 Board";
+	compatible = "custom,g070cb", "st,stm32g070";
+
+	chosen {
+		zephyr,console = &usart1;
+		zephyr,shell-uart = &usart1;
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		led1: led_1 {
+			gpios = <&gpioa 11 GPIO_ACTIVE_LOW>;
+			label = "User LED 1";
+		};
+		led2: led_2 {
+			gpios = <&gpioa 12 GPIO_ACTIVE_LOW>;
+			label = "User LED 2";
+		};
+	};
+
+	keys {
+		compatible = "gpio-keys";
+		key1: key_1 {
+			gpios = <&gpiod 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "User Key 1";
+		};
+		key2: key_2 {
+			gpios = <&gpiod 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "User Key 2";
+		};
+		key3: key_3 {
+			gpios = <&gpiod 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "User Key 3";
+		};
+		key4: key_4 {
+			gpios = <&gpiod 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+			label = "User Key 4";
+		};
+	};
+
+	aliases {
+		led0 = &led1;
+		led1 = &led2;
+		sw0 = &key1;
+		sw1 = &key2;
+		sw2 = &key3;
+		sw3 = &key4;
+	};
+};
+
+&clk_hsi {
+	status = "okay";
+};
+
+&pll {
+	div-m = <1>;
+	mul-n = <8>;
+	div-r = <2>;
+	clocks = <&clk_hsi>;
+	status = "okay";
+};
+
+&rcc {
+	clocks = <&pll>;
+	clock-frequency = <DT_FREQ_M(64)>;
+	ahb-prescaler = <1>;
+	apb1-prescaler = <1>;
+};
+
+&usart1 {
+	pinctrl-0 = <&usart1_tx_pa9 &usart1_rx_pa10>;
+	pinctrl-names = "default";
+	current-speed = <115200>;
+	status = "okay";
+};

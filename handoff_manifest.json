@@ -1,0 +1,223 @@
+{
+  "generated": "2026-08-10",
+  "source": "D:/nanyun",
+  "destination": "D:/nanyun_handoff",
+  "included_tops": [
+    "02-工作汇报",
+    "03-实验箱与产品",
+    "04-竞赛与方案",
+    "05-硬件与模块",
+    "06-嵌入式工程"
+  ],
+  "stats": {
+    "copied_files": 12100,
+    "copied_bytes": 1037300638,
+    "build_artifact": 951,
+    "excluded_directory": 56,
+    "sensitive_filename": 2,
+    "temporary_file": 10,
+    "office_lock_file": 8,
+    "temporary_or_review_directory": 23,
+    "backup_directory": 5,
+    "over_95mb_github_limit": 1
+  },
+  "top_stats": {
+    "02-工作汇报": {
+      "files": 15,
+      "bytes": 337014,
+      "gb": 0.0
+    },
+    "03-实验箱与产品": {
+      "files": 797,
+      "bytes": 363764319,
+      "gb": 0.339
+    },
+    "04-竞赛与方案": {
+      "files": 574,
+      "bytes": 195557264,
+      "gb": 0.182
+    },
+    "05-硬件与模块": {
+      "files": 879,
+      "bytes": 150201465,
+      "gb": 0.14
+    },
+    "06-嵌入式工程": {
+      "files": 9835,
+      "bytes": 327440576,
+      "gb": 0.305
+    }
+  },
+  "redactions": {
+    "office_metadata": 723,
+    "phone": 61,
+    "ip_address": 207,
+    "email": 53,
+    "id_number": 2104
+  },
+  "skipped_samples": {
+    "backup_directory": [
+      "04-竞赛与方案/离职交接/实验箱开发/智能家居树莓派模块_backup",
+      "04-竞赛与方案/离职交接/实验箱开发/鸿蒙H3861核心板_backup",
+      "04-竞赛与方案/离职交接/实验箱开发/鸿蒙智能门锁模块_backup",
+      "04-竞赛与方案/离职交接/实验箱开发/鸿蒙板子/底板_2026-01-14_14-22-27_backup",
+      "04-竞赛与方案/离职交接/实验箱开发/鸿蒙板子/鸿蒙物联网实验箱_2026-01-04_08-54-42_backup"
+    ],
+    "build_artifact": [
+      "03-实验箱与产品/实验箱/lora/loradriversdk-v2.0.0/LoRaDriverSDK/project/Listings/startup_stm32f10x_md.lst",
+      "03-实验箱与产品/实验箱/lora/loradriversdk-v2.0.0/LoRaDriverSDK/project/Listings/sx127xDriverSDK.map",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Listings/startup_stm32f10x_md.lst",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Listings/SX127xDriver.map",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/core_cm3.crf",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/core_cm3.d",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/core_cm3.o",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/delay.crf",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/delay.d",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/delay.o",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/hal_uart.crf",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/hal_uart.d",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/hal_uart.o",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/main.crf",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/main.d",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/main.o",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/misc.crf",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/misc.d",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/misc.o",
+      "03-实验箱与产品/实验箱/lora/sx127xled点对点控制demo/MDKProject/Objects/startup_stm32f10x_md.d"
+    ],
+    "excluded_directory": [
+      "03-实验箱与产品/实验箱/lora/sx127xdriver-v1.0.0/MDKProject/.vscode",
+      "03-实验箱与产品/实验箱/YX55658-RC522射频卡用户使用手册资料Ver_1.0-190509/TJDZ-RC522射频卡用户使用手册资料Ver_1.0/MSP430F149读卡号参考例程/Debug",
+      "03-实验箱与产品/物联网/99-临时与测试",
+      "03-实验箱与产品/物联网/tmp",
+      "03-实验箱与产品/物联网/04-素材与过程/_方案素材/__pycache__",
+      "04-竞赛与方案/印制电路制作工/.opencode",
+      "04-竞赛与方案/印制电路制作工/.trellis",
+      "04-竞赛与方案/印制电���制作工/.trellis",
+      "05-硬件与模块/ebyte/E18-ZSTACK/CoordinatorEB/List",
+      "05-硬件与模块/ebyte/E18-ZSTACK/CoordinatorEB/Obj",
+      "05-硬件与模块/SU-03T开发包；版本V2.1.2/02、模块烧录资料/02、模块烧录软件/02、蜂鸟调试器烧录软件/Hummingbird-M-Production-Tool/ice/target",
+      "05-硬件与模块/ZigBee_通用工程/Project/Debug",
+      "05-硬件与模块/ZigBee_通用工程/Project/GenericApp_Clean/CC2530DB/CoordinatorEB/List",
+      "05-硬件与模块/ZigBee_通用工程/Project/GenericApp_Clean/CC2530DB/CoordinatorEB/Obj",
+      "05-硬件与模块/ZigBee_通用工程/Project/GenericApp_Clean/CC2530DB/RouterEB/List",
+      "05-硬件与模块/ZigBee_通用工程/Project/GenericApp_Clean/CC2530DB/RouterEB/Obj",
+      "05-硬件与模块/ZigBee_通用工程/zigbee读取光照控制B板风扇开启/A板发送板/Project/Debug",
+      "05-硬件与模块/ZigBee_通用工程/zigbee读取光照控制B板风扇开启/B板接收板/Project/Debug",
+      "06-嵌入式工程/st-arm-clang-shims",
+      "06-嵌入式工程/test_build"
+    ],
+    "office_lock_file": [
+      "03-实验箱与产品/嵌入式-研发/~$式实验箱研发方案.docx",
+      "03-实验箱与产品/嵌入式-研发/~$式实验箱研发方案V2.docx",
+      "03-实验箱与产品/物联网/07-14-嵌入式会议一修交付/方案/~$式综合实验室建设项目方案-会议一修对齐版.docx",
+      "04-竞赛与方案/zw/样题/第三套/02竞赛素材/0202答题卡（需打印）/~$C_缺陷记录表.docx",
+      "04-竞赛与方案/zw/样题/第二套/02竞赛素材/0202答题卡（需打印）/~$C_缺陷记录表.docx",
+      "04-竞赛与方案/印制电路制作工/02_样题/8.7修改/第三套/02竞赛素材/0202答题卡（需打印）/~$C_缺陷记录表.docx",
+      "04-竞赛与方案/印制电路制作工/02_样题/8.7修改/第二套/02竞赛素材/0202答题卡（需打印）/~$C_缺陷记录表.docx",
+      "05-硬件与模块/SU-03T开发包；版本V2.1.2/05、喇叭和咪头选型推荐/~$08、CI-03T、SU-03T、SU-63T、SU-23T引脚比对(3).xlsx"
+    ],
+    "over_95mb_github_limit": [
+      "04-竞赛与方案/离职交接/实验箱开发/鸿蒙板子/物联网实验箱.zip"
+    ],
+    "sensitive_filename": [
+      "03-实验箱与产品/实验箱/YX55658-RC522射频卡用户使用手册资料Ver_1.0-190509/TJDZ-RC522射频卡用户使用手册资料Ver_1.0/相关数据手册和参考文献/Mifare卡说明/有关S50的AB密钥浅谈.pdf",
+      "03-实验箱与产品/实验箱/YX55658-RC522射频卡用户使用手册资料Ver_1.0-190509/TJDZ-RC522射频卡用户使用手册资料Ver_1.0/相关数据手册和参考文献/加密算法/DES_zyj/密钥二进制表示.dat"
+    ],
+    "temporary_file": [
+      "03-实验箱与产品/实验箱/YX55658-RC522射频卡用户使用手册资料Ver_1.0-190509/TJDZ-RC522射频卡用户使用手册资料Ver_1.0/相关数据手册和参考文献/参考DEMO源代码/C430/MAIN.C.bak",
+      "03-实验箱与产品/实验箱/YX55658-RC522射频卡用户使用手册资料Ver_1.0-190509/TJDZ-RC522射频卡用户使用手册资料Ver_1.0/相关数据手册和参考文献/参考DEMO源代码/C51/TEST522_Opt.Bak",
+      "03-实验箱与产品/实验箱/YX55658-RC522射频卡用户使用手册资料Ver_1.0-190509/TJDZ-RC522射频卡用户使用手册资料Ver_1.0/相关数据手册和参考文献/参考DEMO源代码/C51/TEST522_Uv2.Bak",
+      "05-硬件与模块/ebyte/E18-MS1-PCB/无线串口收发例程（STM32）/user/MFC9473.tmp",
+      "05-硬件与模块/ebyte/E18-MS1-PCB/无线串口收发例程（STM32）/user/MFCC423.tmp",
+      "05-硬件与模块/ebyte/E18-MS1-PCB/无线串口收发例程（STM32）/user/uart.uvguix_Administrator.bak",
+      "05-硬件与模块/ebyte/E18-MS1-PCB/无线串口收发例程（STM32）/user/uart_uvoptx.bak",
+      "05-硬件与模块/ebyte/E18-MS1-PCB/无线串口收发例程（STM32）/user/uart_uvprojx.bak",
+      "06-嵌入式工程/IOT experiment/STARM/RC522  STM32测试程序/STM32F103ZET6代码/Output/Template_sct.Bak",
+      "06-嵌入式工程/IOT experiment/STARM1/RC522  STM32测试程序/STM32F103ZET6代码/Output/Template_sct.Bak"
+    ],
+    "temporary_or_review_directory": [
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/attachments1-review-backup-20260709-175201",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/chrome-profile",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/competition-folder-sync-backup-20260710-085758",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/embedded-application-sync-backup-20260710-090944",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/figure-3-2-backup-20260710-091958",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/figure-3-7-backup-20260710-092523",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/final-review-backup-20260709-162719",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/full-figure-text-review-backup-20260710-093749",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/livestock-case-backup-20260709-173417",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/livestock-sandbox-backup-20260710-085237",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/meeting-material-backup-20260712-130710",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/rendered_docx",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/rendered_word_com",
+      "03-实验箱与产品/物联网/04-素材与过程/_嵌入式综合实验室生成过程/scheme1-cross-sync-backup-20260710-091346",
+      "03-实验箱与产品/物联网/04-素材与过程/_方案素材/rendered_course_modular",
+      "03-实验箱与产品/物联网/04-素材与过程/_方案素材/rendered_course_modular_word",
+      "03-实验箱与产品/物联网/04-素材与过程/_方案素材/rendered_real_scene_final",
+      "03-实验箱与产品/物联网/04-素材与过程/_方案素材/rendered_real_scene_libreoffice",
+      "03-实验箱与产品/物联网/04-素材与过程/_方案素材/rendered_real_scene_skill",
+      "03-实验箱与产品/物联网/04-素材与过程/_方案素材/rendered_real_scene_word"
+    ]
+  },
+  "rules": {
+    "max_file_size_mb": 95,
+    "excluded_top_level": [
+      "01-财务报销",
+      ".git",
+      ".opencode",
+      ".trellis",
+      "tmp"
+    ],
+    "excluded_directory_categories": [
+      ".cache",
+      ".git",
+      ".idea",
+      ".metadata",
+      ".opencode",
+      ".settings",
+      ".trellis",
+      ".vs",
+      ".vscode",
+      "99-临时与测试",
+      "Debug",
+      "EWARM",
+      "List",
+      "MDK-ARM",
+      "Obj",
+      "Release",
+      "__pycache__",
+      "build",
+      "dist",
+      "node_modules",
+      "out",
+      "st-arm-clang-shims",
+      "target",
+      "temp",
+      "test_build",
+      "tmp",
+      "zephyrproject"
+    ],
+    "excluded_sensitive_extensions": [
+      ".env",
+      ".jks",
+      ".kdbx",
+      ".key",
+      ".keystore",
+      ".ovpn",
+      ".p12",
+      ".pem",
+      ".pfx"
+    ],
+    "text_redaction_patterns": [
+      "email",
+      "phone",
+      "Chinese ID number",
+      "IPv4",
+      "URL credentials",
+      "Bearer token",
+      "JWT",
+      "common secret assignments",
+      "private key blocks"
+    ]
+  }
+}

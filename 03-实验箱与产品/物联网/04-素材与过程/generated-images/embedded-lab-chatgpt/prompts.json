@@ -1,0 +1,26 @@
+{
+  "asset_set": "embedded-lab-chatgpt",
+  "created_for": "嵌入式综合实验室建设项目方案",
+  "prompts": [
+    {
+      "id": "embedded-lab-overview",
+      "filename_prefix": "embedded-lab-overview",
+      "prompt": "Create an image: a realistic embedded systems comprehensive laboratory for a vocational college. Show an organized bright classroom with rows of student workstations, embedded development kits, microcontroller boards, sensor modules, edge gateways, and a clean teaching screen. Use a formal Chinese proposal style, realistic lighting, tidy desks, blue-white neutral interior, no readable text, no logos, no watermarks, no UI chrome, no distorted equipment, no extra people. Composition: wide 16:9 room perspective, suitable as a lab effect image for a construction proposal."
+    },
+    {
+      "id": "embedded-lab-workstations",
+      "filename_prefix": "embedded-lab-workstations",
+      "prompt": "Create an image: a realistic 50-person embedded systems training classroom with 25 paired student workstations. Each workstation has a PC, compact embedded experiment kit, sensor boards, small communication modules, and safe low-voltage wiring. Use clean official-document realism, bright classroom lighting, orderly cable management, neutral blue-white teaching-lab interior, no readable text, no logos, no watermarks, no UI chrome, no distorted hardware. Composition: 16:9 slightly elevated perspective, suitable for a formal lab construction proposal."
+    },
+    {
+      "id": "embedded-kit-closeup",
+      "filename_prefix": "embedded-kit-closeup",
+      "prompt": "Create an image: a clean product close-up of a modular embedded systems experiment kit in a portable case. Show interchangeable MCU, OpenHarmony/embedded module, sensor, communication, RFID, actuator, and edge gateway modules arranged neatly with connectors and labels represented only as abstract blank shapes. Use realistic industrial design, soft studio lighting, professional teaching-lab desk, no readable text, no brand logos, no watermark, no UI chrome, no distorted equipment. Composition: three-quarter 4:3 product view, suitable as an equipment illustration in a formal proposal."
+    },
+    {
+      "id": "embedded-aiot-scenario",
+      "filename_prefix": "embedded-aiot-scenario",
+      "prompt": "Create an image: an embedded AIoT training scenario demonstration in a classroom. Show a small smart agriculture and fermentation monitoring setup with sensors, a transparent demo container, edge gateway, actuator modules, and a dashboard screen with abstract charts only. Use realistic classroom demonstration style, clean equipment organization, bright official proposal lighting, no readable text, no logos, no watermarks, no UI chrome, no distorted hardware. Composition: 16:9 application scenario effect image for a technical construction proposal."
+    }
+  ]
+}

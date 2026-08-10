@@ -1,0 +1,62 @@
+结论
+
+
+这次问题的根因不是 AHT30，而是 UART 初始化链路和工程编译宏冲突。
+
+最终方案是：应用层直接驱动 UART0 到 P1.4/RX + P1.5/TX，不再依赖 HalUARTOpen/HalUARTWrite。
+
+
+根因
+
+
+xMT_TASK、xZTOOL_P1 让工程走了 MT/ZTool 串口路径，和你要的固定引脚输出冲突。
+
+HalUART 默认驱动会按它自己的口位/任务栈配置工作，不适合你这种“只想固定用 P1.4/P1.5 打印日志”的场景。
+
+代码里还有几个 32 字节缓冲区太小的问题，容易引起异常或乱码。
+
+
+怎么改的
+
+
+关闭工程里的 xMT_TASK、xZTOOL_P1，避免 MT 串口任务抢占/干扰串口。
+
+在 zcl_genericapp.c 里新增：
+
+AppUart0_Init()：直接配置 PERCFG / P1SEL / P1DIR / ADCCFG / U0CSR / U0UCR / U0BAUD / U0GCR
+
+AppUart0_Write()：轮询 UTX0IF，直接写 U0DBUF
+
+AppUart0_Puts()：方便打印字符串
+
+
+
+
+把所有调试输出从 HalUARTWrite() 换成 AppUart0_Write()。
+
+把相关输出缓冲区从 32 字节扩大到 48/64 字节，避免越界。
+
+最终串口输出验证通过：Local Temp / Humi 能持续实时打印。
+
+
+复用方式
+
+
+以后如果别的工程也要固定用 UART0 的非默认引脚，直接照这个思路做：
+
+先在工程定义里去掉 MT/ZTool 串口宏
+
+再自己写一套最小 UART 初始化和发送函数
+
+不要和 HalUART 混用
+
+
+
+
+
+注意
+
+
+现在温湿度打印已经稳定。
+
+HB[u] sysClk=u 只是心跳那行格式还可以再单独整理，不影响主功能。

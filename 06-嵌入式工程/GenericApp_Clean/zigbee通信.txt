@@ -1,0 +1,197 @@
+# CC2530 + Z-Stack 3.0.2 实战：Router 采集 AHT30 并上报，Coordinator 串口实时输出
+
+## 1. 目标
+
+本文记录一次完整联调过程，目标是实现：
+
+1. Router 端实时采集 AHT30 温湿度并本地显示  
+2. Router 端通过 Zigbee 上报温湿度到 Coordinator  
+3. Coordinator 端作为纯接收器，只做串口打印到上位机  
+
+工程路径（CC2530）：
+
+- [GenericApp.ewp](D:/Develop/Texas Instruments/Z-Stack 3.0.2/Projects/zstack/HomeAutomation/GenericApp/CC2530DB/GenericApp.ewp)
+- [zcl_genericapp.c](D:/Develop/Texas Instruments/Z-Stack 3.0.2/Projects/zstack/HomeAutomation/GenericApp/Source/zcl_genericapp.c)
+- [zcl_genericapp.h](D:/Develop/Texas Instruments/Z-Stack 3.0.2/Projects/zstack/HomeAutomation/GenericApp/Source/zcl_genericapp.h)
+
+---
+
+## 2. 最终效果
+
+最终日志已证明链路打通：
+
+1. Router 日志持续输出本地温湿度 `Local Temp/Humi`  
+2. Coordinator 日志持续输出 `RX ZCL REPORT` + `Remote Temp/Humi`  
+3. 两端数值变化同步，且周期稳定  
+
+结论：**采集、无线传输、接收串口输出三段全部正常。**
+
+---
+
+## 3. 系统方案设计
+
+### 3.1 角色分工
+
+1. Router：  
+   - 初始化 UART + OLED + AHT30  
+   - 周期采样 AHT30  
+   - OLED 显示本地数据  
+   - 通过 ZCL Report 上报到短地址 `0x0000`（Coordinator）
+2. Coordinator：  
+   - 初始化 UART  
+   - 不初始化任何 IIC 外设（OLED/AHT30）  
+   - 接收 ZCL Report 并串口打印  
+
+### 3.2 无线数据格式（RO -> CO）
+
+采用标准 ZCL Report Attributes，不自定义私有裸协议：
+
+1. 温度：  
+   - Cluster：`0x0402` (`ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT`)  
+   - Attr：`0x0000` (`ATTRID_MS_TEMPERATURE_MEASURED_VALUE`)  
+   - Type：`int16`  
+   - Value：`temperature * 100`
+2. 湿度：  
+   - Cluster：`0x0405` (`ZCL_CLUSTER_ID_MS_RELATIVE_HUMIDITY`)  
+   - Attr：`0x0000` (`ATTRID_MS_RELATIVE_HUMIDITY_MEASURED_VALUE`)  
+   - Type：`uint16`  
+   - Value：`humidity * 100`
+
+---
+
+## 4. 关键问题与修复过程
+
+## 4.1 UART 上电乱码、无持续输出
+
+### 现象
+
+1. 上电只出几条乱码  
+2. 无周期输出，或输出中断  
+
+### 核心修复
+
+1. 改为直接驱动 UART0（避免与 MT/UART 复用冲突）  
+2. 固定引脚到 `P1.5 TX / P1.4 RX`（Alt-2）  
+3. 统一波特率参数  
+4. 修正不兼容寄存器标识问题（如 `UTX0IE` 未定义）  
+5. 扩大字符串缓冲区，避免越界导致串口异常  
+
+---
+
+## 4.2 编译错误：`zcl_SendReportCmd` 隐式声明 + 方向宏未定义
+
+### 现象
+
+1. `function "zcl_SendReportCmd" declared implicitly`  
+2. `ZCL_FRAME_CLIENT_TO_SERVER is undefined`  
+
+### 根因
+
+1. `zcl_SendReportCmd` 原型受 `ZCL_REPORTING_DEVICE` 条件编译控制  
+2. `ZCL_FRAME_CLIENT_TO_SERVER` 不是本工程有效宏名  
+
+### 修复
+
+1. Router 配置开启 `BDB_REPORTING`（触发报告相关宏）  
+2. 报告方向改为 `ZCL_FRAME_SERVER_CLIENT_DIR`  
+
+---
+
+## 4.3 Coordinator 不接收 Report（最关键）
+
+### 现象
+
+1. Router 显示 `BDB STEER ok` 且持续采样  
+2. Coordinator 也在网内，但没有 `RX ZCL REPORT`  
+
+### 根因（关键坑）
+
+`zcl.c` 中 `ZCL_CMD_REPORT` 的解析入口由 `ZCL_REPORT_DESTINATION_DEVICE` 控制；Coordinator 未开启该宏，导致 Report 在 ZCL 层被丢弃。
+
+### 修复
+
+在 `CoordinatorEB` 的编译宏中添加：
+
+1. `ZCL_REPORT_DESTINATION_DEVICE`
+
+在 `RouterEB` 保持：
+
+1. `BDB_REPORTING`
+
+---
+
+## 4.4 Coordinator 必须是纯接收器
+
+### 改造点
+
+1. Coordinator 启动路径移除 OLED/AHT30/IIC 初始化  
+2. Coordinator 仅保留 UART + ZCL 报文解析打印  
+3. Router 才保留 OLED/AHT30 逻辑  
+
+---
+
+## 4.5 组网时序抖动与稳定性
+
+### 现象
+
+偶发 `BDB FORM fail`、`BDB STEER fail`，但后续可能成功。
+
+### 增强措施
+
+1. 上电自动启动 commissioning（不依赖按键）  
+2. 增加状态日志：`NWK: ...`、`BDB ...`  
+3. 增加失败自动重试事件  
+4. 入网后自动停止重试  
+
+这一步显著提高现场稳定性和可维护性。
+
+---
+
+## 5. 关键实现点（代码级）
+
+## 5.1 主要文件
+
+1. 业务逻辑：  
+   - [zcl_genericapp.c](D:/Develop/Texas Instruments/Z-Stack 3.0.2/Projects/zstack/HomeAutomation/GenericApp/Source/zcl_genericapp.c)
+2. 事件定义：  
+   - [zcl_genericapp.h](D:/Develop/Texas Instruments/Z-Stack 3.0.2/Projects/zstack/HomeAutomation/GenericApp/Source/zcl_genericapp.h)
+3. 工程宏配置：  
+   - [GenericApp.ewp](D:/Develop/Texas Instruments/Z-Stack 3.0.2/Projects/zstack/HomeAutomation/GenericApp/CC2530DB/GenericApp.ewp)
+
+## 5.2 事件机制
+
+1. `GENERICAPP_READ_SENSOR_EVT`：Router 周期采样并上报  
+2. `GENERICAPP_HEARTBEAT_EVT`：Router 心跳日志  
+3. `GENERICAPP_START_COMMISSION_EVT`：上电自动 commissioning  
+4. `GENERICAPP_RETRY_COMMISSION_EVT`：失败自动重试  
+
+## 5.3 Coordinator 接收路径
+
+1. `ZCL_INCOMING_MSG` -> `zclGenericApp_ProcessIncomingMsg`  
+2. `case ZCL_CMD_REPORT` 内按 cluster/attr 解析  
+3. 串口打印 `Remote Temp` / `Remote Humi`  
+
+---
+
+## 6. 验证结果（最终）
+
+从最终日志可以确认：
+
+1. Router：`NWK: DEV_ROUTER`、`BDB STEER ok`、持续 `Local Temp/Humi`
+2. Coordinator：`NWK: DEV_ZB_COORD`、持续 `RX ZCL REPORT`、持续 `Remote Temp/Humi`
+
+因此系统满足最初目标，已可复用到同类节点采集上报场景。
+
+---
+
+## 7. 可复用经验总结
+
+1. Z-Stack 的 ZCL Report“发”和“收”是两套宏开关，必须分别配置。  
+2. 角色分层一定要硬隔离：Router 采集，Coordinator 接收。  
+3. 联调时必须加可观测日志（NWK 状态、BDB 状态、TX失败）。  
+4. 自动 commissioning + 自动重试，比按键触发更适合工程化部署。  
+5. 串口异常优先排查：引脚复用、寄存器配置、缓冲区越界、编译库限制（如 `%f`）。  
+
+---
+
+如果你需要，我可以下一步把这篇博客整理成“对外发布版”（加架构图、时序图、配置截图、最终代码片段清单）。

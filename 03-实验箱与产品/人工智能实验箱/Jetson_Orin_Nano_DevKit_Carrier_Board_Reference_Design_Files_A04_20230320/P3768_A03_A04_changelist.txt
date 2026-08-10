@@ -1,0 +1,20 @@
+1. To fix power down sequence of VDD_1V8:
+a. Changed U5 from GS7116S5-ADJ-R to AP2127K-1.8TRG1
+b. Removed C408 1uF 0402
+c. Changed C411 from 1nF 0402 to 1uF 0402
+d. Removed C412 4.7uF 0603
+e. Removed R515 124k 0402
+f. Changed R516 from 100k 0402 to 0ohm 0402
+
+2. To fix power down sequence of VDD_3V3_SYS
+a. Changed Q37 from DMN61D9UW-7 to DMG1012UW-7
+b. Changed R205 from 5.6ohm 0402 to 1.27ohm 0402
+
+3. Added external discharge circuit for VDD_1V8 when using LDOs which don’t have internal discharge or don’t discharge fast enough
+a. Added Q60,Q61,R562,R563
+
+4. Added co-layout SOT23 option for Q37 (SOT323) to support more alternate parts for VDD_3V3_SYS discharge circuit.
+a. Added Q59,R561
+
+5. Added pull-ups to VDD_5V0_HDMI_CON for HDMI SCL/SDA
+a. Added R998,R999

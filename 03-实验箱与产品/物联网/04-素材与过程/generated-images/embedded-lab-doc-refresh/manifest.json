@@ -1,0 +1,50 @@
+{
+  "created_at": "2026-07-09T03:47:05.345Z",
+  "source": "chrome-chatgpt-web",
+  "url": "https://chatgpt.com/",
+  "profile_dir": "C:\\Users\\19y\\.codex\\browser-profiles\\chatgpt-imagegen-chrome",
+  "chrome_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "out_dir": "D:\\nanyun\\物联网\\generated-images\\embedded-lab-doc-refresh",
+  "manifest_path": "D:\\nanyun\\物联网\\generated-images\\embedded-lab-doc-refresh\\manifest.json",
+  "prompt_count": 3,
+  "requested_image_count": 3,
+  "visible": false,
+  "headless": false,
+  "launch_mode": "normal-chrome-cdp",
+  "cdp_port": 60224,
+  "images": [
+    {
+      "path": "D:\\nanyun\\物联网\\generated-images\\embedded-lab-doc-refresh\\embedded-lab-group-training-scene-01.png",
+      "filename": "embedded-lab-group-training-scene-01.png",
+      "extension": ".png",
+      "size_bytes": 1269432,
+      "sha256": "aac3d73011548c08534c71449e53190fadecaa03545f2cc9dd329c89a21eab9f",
+      "width": 898,
+      "height": 676,
+      "detected_format": "png",
+      "modified_time": "2026-07-09T03:56:16.294Z",
+      "download_method": "visible-image-page-fetch",
+      "source_url_hint": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000deec71fd9ba6da98cefc6c6b&ts=495435&p=fs&cid=1&sig=71a61b29cfab1c11dc73ed6fcfe00ae75ff68768540eef034fb2104c7d0d1f32&v",
+      "page_reported_width": 898,
+      "page_reported_height": 676,
+      "mime": "image/png",
+      "id": "embedded-lab-group-training-scene",
+      "prompt": "Create one high-resolution realistic classroom training scene for a formal embedded systems laboratory proposal. Show 25 organized two-person workstations in a bright lab, each workstation with a monitor, compact tools, MCU development board, sensor modules, and a portable modular embedded experiment kit. The experiment kit must resemble this product reference: opened black aluminum carrying case with silver inner tray, multiple white plug-in circuit modules, central black touch display, metal edge protection, latches and handle. Show a teacher demonstration area and projection screen, but with no readable text on screens or walls. No IoT words, no Chinese characters, no brand logos, no watermark. The image should clearly communicate 50-person grouped hands-on embedded systems training, clean and realistic, proposal-document style. Composition: wide 16:9, slightly elevated room perspective.",
+      "filename_prefix": "embedded-lab-group-training-scene",
+      "count": 1
+    }
+  ],
+  "errors": [
+    {
+      "id": "embedded-lab-overall-effect",
+      "prompt": "Create one high-resolution realistic image for a formal Chinese construction proposal. Subject: an embedded systems comprehensive laboratory for a vocational college, about 120 square meters, 25 two-person student workstations, 50 students capacity. Show clean rows of desks, desktop monitors, oscilloscopes, embedded development boards, sensors, RFID modules, edge gateways, and several portable experiment kits. The portable experiment kit must resemble this product reference: black aluminum suitcase style, opened case, silver inner panel, multiple removable white circuit-board modules arranged in a grid, a central black touch screen, metal latches and handle. Important: remove all IoT-lab branding; do not show readable Chinese or English text anywhere, no wall title, no logos, no watermark. Bright blue-white teaching-lab interior, realistic architectural visualization, tidy equipment, professional official-document style. Composition: wide 16:9 front classroom perspective, suitable for figure caption '嵌入式综合实验室整体效果图'.",
+      "error": "page.waitForFunction: Timeout 300000ms exceeded.\n    at waitForNewImages (C:\\Users\\19y\\.codex\\skills\\chrome-chatgpt-imagegen\\scripts\\chatgpt_imagegen_runner.mjs:364:14)\n    at runPrompt (C:\\Users\\19y\\.codex\\skills\\chrome-chatgpt-imagegen\\scripts\\chatgpt_imagegen_runner.mjs:607:9)\n    at async main (C:\\Users\\19y\\.codex\\skills\\chrome-chatgpt-imagegen\\scripts\\chatgpt_imagegen_runner.mjs:721:24)"
+    },
+    {
+      "id": "embedded-aiot-scenario-demo",
+      "prompt": "Create one high-resolution realistic image for an embedded AIoT application scenario demonstration inside a teaching lab. Show a lab bench with a portable modular embedded experiment kit, edge gateway, environmental sensors, RFID reader, actuator modules, small smart agriculture and environmental monitoring demo models, and a monitor with abstract dashboard graphics that contain no readable text. The experiment kit must resemble this product reference: opened black aluminum suitcase, silver panel, multiple removable white circuit boards, central black touch screen, precise connectors, latches and handle. Avoid generic IoT marketing visuals. No readable Chinese or English text, no logos, no watermark. Lighting is bright and clean, realistic product-and-scene hybrid composition, suitable for formal proposal figure caption 'AIoT平台与行业应用展示效果图'. Composition: wide 16:9.",
+      "error": "page.waitForFunction: Target page, context or browser has been closed\n    at waitForNewImages (C:\\Users\\19y\\.codex\\skills\\chrome-chatgpt-imagegen\\scripts\\chatgpt_imagegen_runner.mjs:364:14)\n    at runPrompt (C:\\Users\\19y\\.codex\\skills\\chrome-chatgpt-imagegen\\scripts\\chatgpt_imagegen_runner.mjs:607:9)\n    at async main (C:\\Users\\19y\\.codex\\skills\\chrome-chatgpt-imagegen\\scripts\\chatgpt_imagegen_runner.mjs:721:24)"
+    }
+  ],
+  "count": 1
+}

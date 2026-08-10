@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    width: 1600px;
+    height: 940px;
+    background: #ffffff;
+    color: #111111;
+    font-family: "Microsoft YaHei", "SimHei", "SimSun", sans-serif;
+  }
+  .canvas {
+    width: 1600px;
+    height: 940px;
+    padding: 54px 70px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+  .chart-title {
+    font-family: "SimHei", "Microsoft YaHei", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    letter-spacing: 0;
+  }
+  .chart-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-top: 8px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid #222;
+  }
+  .accent-line {
+    height: 4px;
+    width: 90px;
+    background: linear-gradient(90deg, #075FBF, #D98200);
+    margin-top: 12px;
+  }
+  .body { position: relative; height: 760px; margin-top: 34px; }
+  .box {
+    position: absolute;
+    border: 2px solid #777;
+    background: #fff;
+    color: #111;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.45;
+  }
+  .box .k { font-size: 23px; font-weight: 700; color: #000; }
+  .box .v { font-size: 18px; color: #222; margin-top: 7px; }
+  .box.light { background: #f8f8f8; }
+  .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+  .blue-rule { border-top: 5px solid #075FBF; }
+  .orange-rule { border-top: 5px solid #D98200; }
+  .thin { border-color: #aaa; }
+  svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; }
+  .note {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    bottom: 22px;
+    padding: 18px 24px;
+    border-left: 5px solid #111;
+    background: #f8f8f8;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #111;
+  }
+  .mini {
+    position: absolute;
+    border: 1.6px solid #999;
+    background: #fff;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+  .grid-label { font-weight: 700; font-size: 20px; }
+  .room { position:absolute; border: 3px solid #111; background:#fff; }
+  .desk { position:absolute; border:1.5px solid #777; background:#f9f9f9; text-align:center; font-size:15px; line-height:1.2; display:flex; align-items:center; justify-content:center; }
+  .lane {
+    position: absolute;
+    border: 1.8px solid #8a8a8a;
+    background: #fff;
+    padding: 16px 18px;
+    font-size: 18px;
+    line-height: 1.42;
+  }
+  .lane-title {
+    font-family: "SimHei", "Microsoft YaHei", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #cfcfcf;
+  }
+  .chip {
+    display: inline-block;
+    margin: 5px 4px;
+    padding: 6px 10px;
+    border: 1.4px solid #999;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .port {
+    position: absolute;
+    width: 74px;
+    height: 48px;
+    border: 1.6px solid #777;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="chart-title">政策-产业-专业建设逻辑图</div>
+    <div class="chart-subtitle">以职业教育数字化与鸿蒙物联网技术栈支撑实训条件升级</div>
+    <div class="accent-line"></div>
+    <div class="body"><svg viewBox="0 0 1460 760">
+      <defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#333"/></marker></defs>
+      <line x1="312" y1="228" x2="392" y2="228" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="650" y1="228" x2="730" y2="228" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="988" y1="228" x2="1068" y2="228" stroke="#333" stroke-width="3" marker-end="url(#arrow)" />
+    </svg><div class="box blue-rule" style="left:40px;top:110px;width:270px;height:235px;"><div class="k">政策牵引</div><div class="v">职业教育数字化<br>现代职教体系<br>专业教学标准</div></div><div class="box orange-rule" style="left:390px;top:110px;width:270px;height:235px;"><div class="k">产业需求</div><div class="v">AIoT终端接入<br>边缘网关集成<br>数据可视化运维</div></div><div class="box blue-rule" style="left:730px;top:110px;width:270px;height:235px;"><div class="k">技术底座</div><div class="v">OpenHarmony<br>STM32 / ZigBee<br>MQTT / Modbus</div></div><div class="box orange-rule" style="left:1070px;top:110px;width:300px;height:235px;"><div class="k">专业建设</div><div class="v">课程实训平台<br>云平台<br>50人项目化教学</div></div><div class="note">建设结果：形成“硬件可操作、软件可管理、数据可沉淀、项目可评价、场景可迁移”的鸿蒙物联网综合实训环境。</div></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    width: 1600px;
+    height: 940px;
+    background: #ffffff;
+    color: #111111;
+    font-family: "Microsoft YaHei", "SimHei", "SimSun", sans-serif;
+  }
+  .canvas {
+    width: 1600px;
+    height: 940px;
+    padding: 54px 70px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+  .chart-title {
+    font-family: "SimHei", "Microsoft YaHei", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    letter-spacing: 0;
+  }
+  .chart-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-top: 8px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid #222;
+  }
+  .accent-line {
+    height: 4px;
+    width: 90px;
+    background: linear-gradient(90deg, #075FBF, #D98200);
+    margin-top: 12px;
+  }
+  .body { position: relative; height: 760px; margin-top: 34px; }
+  .box {
+    position: absolute;
+    border: 2px solid #777;
+    background: #fff;
+    color: #111;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.45;
+  }
+  .box .k { font-size: 23px; font-weight: 700; color: #000; }
+  .box .v { font-size: 18px; color: #222; margin-top: 7px; }
+  .box.light { background: #f8f8f8; }
+  .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+  .blue-rule { border-top: 5px solid #075FBF; }
+  .orange-rule { border-top: 5px solid #D98200; }
+  .thin { border-color: #aaa; }
+  svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; }
+  .note {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    bottom: 22px;
+    padding: 18px 24px;
+    border-left: 5px solid #111;
+    background: #f8f8f8;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #111;
+  }
+  .mini {
+    position: absolute;
+    border: 1.6px solid #999;
+    background: #fff;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+  .grid-label { font-weight: 700; font-size: 20px; }
+  .room { position:absolute; border: 3px solid #111; background:#fff; }
+  .desk { position:absolute; border:1.5px solid #777; background:#f9f9f9; text-align:center; font-size:15px; line-height:1.2; display:flex; align-items:center; justify-content:center; }
+  .lane {
+    position: absolute;
+    border: 1.8px solid #8a8a8a;
+    background: #fff;
+    padding: 16px 18px;
+    font-size: 18px;
+    line-height: 1.42;
+  }
+  .lane-title {
+    font-family: "SimHei", "Microsoft YaHei", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #cfcfcf;
+  }
+  .chip {
+    display: inline-block;
+    margin: 5px 4px;
+    padding: 6px 10px;
+    border: 1.4px solid #999;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .port {
+    position: absolute;
+    width: 74px;
+    height: 48px;
+    border: 1.6px solid #777;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="chart-title">高职物联网专业课程支撑矩阵图</div>
+    <div class="chart-subtitle">课程群、设备模块和能力目标三层对应，回答每门课能做什么、训练什么</div>
+    <div class="accent-line"></div>
+    <div class="body"><svg viewBox="0 0 1460 760">
+      <defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#333"/></marker></defs>
+      <line x1="425" y1="345" x2="535" y2="345" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="925" y1="345" x2="1035" y2="345" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="480" y1="180" x2="480" y2="600" stroke="#d0d0d0" stroke-width="2" stroke-dasharray="8 8"/><line x1="980" y1="180" x2="980" y2="600" stroke="#d0d0d0" stroke-width="2" stroke-dasharray="8 8"/>
+    </svg><div class="lane" style="left:35px;top:75px;width:390px;height:540px;border-top:5px solid #075FBF;"><div class="lane-title">课程群</div><span class="chip">物联网技术基础</span><span class="chip">电工电子技术</span><span class="chip">C语言/嵌入式C</span><span class="chip">单片机应用</span><span class="chip">传感器与检测</span><span class="chip">RFID技术</span><span class="chip">无线传感网络</span><span class="chip">物联网通信</span><span class="chip">设备安装与调试</span><span class="chip">云平台应用</span><span class="chip">系统集成实践</span></div><div class="lane" style="left:535px;top:75px;width:390px;height:540px;border-top:5px solid #D98200;"><div class="lane-title">模块与平台</div><span class="chip">9接口实验箱</span><span class="chip">STM32主控</span><span class="chip">OpenHarmony模块</span><span class="chip">ZigBee节点</span><span class="chip">WiFi/4G/BLE/LoRa/NB</span><span class="chip">传感器包</span><span class="chip">RFID/NFC/二维码</span><span class="chip">执行器包</span><span class="chip">边缘网关</span><span class="chip">AIoT教学云平台</span><span class="chip">行业场景套件</span></div><div class="lane" style="left:1035px;top:75px;width:390px;height:540px;border-top:5px solid #075FBF;"><div class="lane-title">能力目标</div><span class="chip">接口识别</span><span class="chip">硬件调试</span><span class="chip">程序开发</span><span class="chip">传感检测</span><span class="chip">无线组网</span><span class="chip">协议接入</span><span class="chip">平台建模</span><span class="chip">数据可视化</span><span class="chip">规则联动</span><span class="chip">系统集成</span><span class="chip">项目交付</span></div><div class="note">课程组织建议：同一模块可跨多门课程复用，同一课程可由“基础验证-模块组合-平台联调-综合项目”逐级展开。</div></div>
+  </div>
+</body>
+</html>

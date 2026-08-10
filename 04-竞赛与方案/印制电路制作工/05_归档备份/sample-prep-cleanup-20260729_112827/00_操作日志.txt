@@ -1,0 +1,74 @@
+MOVE 02_样题\第一套\印制电路制作工赛项_竞赛样题（完整版）.docx -> 02_样题\第一套\01_样题\印制电路制作工赛项_竞赛样题（完整版）.docx
+MOVE 02_样题\第一套\印制电路制作工赛项_评分标准（第一套·0721口径）.docx -> 02_样题\第一套\02_评分标准\印制电路制作工赛项_评分标准（第一套·0721口径）.docx
+MOVE 02_样题\第一套\印制电路制作工赛项_评分标准（第一套·0721口径）.xlsx -> 02_样题\第一套\02_评分标准\印制电路制作工赛项_评分标准（第一套·0721口径）.xlsx
+MOVE 02_样题\第一套\模块C_缺陷记录表-参考答案.docx -> 02_样题\第一套\03_结果呈现_参考答案\模块C_缺陷记录表-参考答案.docx
+MOVE 02_样题\第一套\模块C_PCB制程工艺卡（参考答案版）.docx -> 02_样题\第一套\03_结果呈现_参考答案\模块C_PCB制程工艺卡（参考答案版）.docx
+MOVE 02_样题\第一套\模块D_检测记录表_参考答案.docx -> 02_样题\第一套\03_结果呈现_参考答案\模块D_检测记录表_参考答案.docx
+MOVE 02_样题\第一套\模块C_缺陷记录表.docx -> 02_样题\第一套\04_需填写内容\模块C_缺陷记录表.docx
+MOVE 02_样题\第一套\模块C_PCB制程工艺卡.docx -> 02_样题\第一套\04_需填写内容\模块C_PCB制程工艺卡.docx
+MOVE 02_样题\第一套\学生组_模块D_检测记录表.docx -> 02_样题\第一套\04_需填写内容\学生组_模块D_检测记录表.docx
+MOVE 02_样题\第一套\模块B.eprj2 -> 02_样题\第一套\05_U盘资料\模块B.eprj2
+MOVE 02_样题\第一套\模块B1.eprj2 -> 02_样题\第一套\05_U盘资料\模块B1.eprj2
+MOVE 02_样题\第一套\模块Cgerber.zip -> 02_样题\第一套\05_U盘资料\模块Cgerber.zip
+MOVE 02_样题\第一套\模块D.eprj2 -> 02_样题\第一套\05_U盘资料\模块D.eprj2
+MOVE 02_样题\第一套\学生组_模块D_检测记录表 - 副本.docx -> 05_归档备份\sample-prep-cleanup-20260729_112827\第一套\学生组_模块D_检测记录表 - 副本.docx
+MOVE 02_样题\第一套\评分标准demo物联网.xlsx -> 05_归档备份\sample-prep-cleanup-20260729_112827\第一套\评分标准demo物联网.xlsx
+README written: 第一套
+MOVE 02_样题\第二套\印制电路制作工赛项_竞赛样题（完整版）.docx -> 02_样题\第二套\01_样题\印制电路制作工赛项_竞赛样题（完整版）.docx
+MOVE 02_样题\第二套\模块C_缺陷记录表-参考答案.docx -> 02_样题\第二套\03_结果呈现_参考答案\模块C_缺陷记录表-参考答案.docx
+MOVE 02_样题\第二套\模块C_缺陷记录表.docx -> 02_样题\第二套\04_需填写内容\模块C_缺陷记录表.docx
+MOVE 02_样题\第二套\模块C_PCB制程工艺卡.docx -> 02_样题\第二套\04_需填写内容\模块C_PCB制程工艺卡.docx
+MOVE 02_样题\第二套\学生组_模块D_检测记录表.docx -> 02_样题\第二套\04_需填写内容\学生组_模块D_检测记录表.docx
+MOVE 02_样题\第二套\00_README_阶段1.md -> 02_样题\第二套\99_命题规格\00_README_阶段1.md
+MOVE 02_样题\第二套\00_命题边界确认表.md -> 02_样题\第二套\99_命题规格\00_命题边界确认表.md
+MOVE 02_样题\第二套\00_工程回填清单.md -> 02_样题\第二套\99_命题规格\00_工程回填清单.md
+MOVE 02_样题\第二套\模块C_缺陷规格_12处.md -> 02_样题\第二套\99_命题规格\模块C_缺陷规格_12处.md
+MOVE 02_样题\第二套\模块D_缺陷规格_D01-D08_AB.md -> 02_样题\第二套\99_命题规格\模块D_缺陷规格_D01-D08_AB.md
+README written: 第二套
+MOVE 02_样题\第三套\印制电路制作工赛项_竞赛样题（完整版）.docx -> 02_样题\第三套\01_样题\印制电路制作工赛项_竞赛样题（完整版）.docx
+MOVE 02_样题\第三套\模块C_缺陷记录表-参考答案.docx -> 02_样题\第三套\03_结果呈现_参考答案\模块C_缺陷记录表-参考答案.docx
+MOVE 02_样题\第三套\模块D_检测记录表_参考答案.docx -> 02_样题\第三套\03_结果呈现_参考答案\模块D_检测记录表_参考答案.docx
+MOVE 02_样题\第三套\模块C_缺陷记录表.docx -> 02_样题\第三套\04_需填写内容\模块C_缺陷记录表.docx
+MOVE 02_样题\第三套\模块C_PCB制程工艺卡.docx -> 02_样题\第三套\04_需填写内容\模块C_PCB制程工艺卡.docx
+MOVE 02_样题\第三套\学生组_模块D_检测记录表.docx -> 02_样题\第三套\04_需填写内容\学生组_模块D_检测记录表.docx
+MOVE 02_样题\第三套\模块B 第三套.eprj2 -> 02_样题\第三套\05_U盘资料\模块B.eprj2
+MOVE 02_样题\第三套\模块D第三套.eprj2 -> 02_样题\第三套\05_U盘资料\模块D.eprj2
+MOVE 02_样题\第三套\00_README_阶段1.md -> 02_样题\第三套\99_命题规格\00_README_阶段1.md
+MOVE 02_样题\第三套\00_主题锚点.md -> 02_样题\第三套\99_命题规格\00_主题锚点.md
+MOVE 02_样题\第三套\00_命题边界确认表.md -> 02_样题\第三套\99_命题规格\00_命题边界确认表.md
+MOVE 02_样题\第三套\00_工程回填清单.md -> 02_样题\第三套\99_命题规格\00_工程回填清单.md
+MOVE 02_样题\第三套\模块C_缺陷规格_12处.md -> 02_样题\第三套\99_命题规格\模块C_缺陷规格_12处.md
+MOVE 02_样题\第三套\模块D_缺陷规格_D01-D08_AB.md -> 02_样题\第三套\99_命题规格\模块D_缺陷规格_D01-D08_AB.md
+MOVE 02_样题\第三套\2D_PCB6_2026-07-25.png -> 02_样题\第三套\99_命题规格\2D_PCB6_2026-07-25.png
+MOVE 02_样题\第三套\Gerber_PCB6_1_2026-07-25.zip -> 02_样题\第三套\99_命题规格\Gerber_PCB6_1_2026-07-25.zip
+MOVE 02_样题\第三套\Netlist_PCB6_2026-07-25.tel -> 02_样题\第三套\99_命题规格\Netlist_PCB6_2026-07-25.tel
+MOVE 02_样题\第三套\Netlist_Schematic1_2026-07-28.tel -> 02_样题\第三套\99_命题规格\Netlist_Schematic1_2026-07-28.tel
+MOVE 02_样题\第三套\模块C_缺陷记录表-参考答案 (修复的).docx -> 05_归档备份\sample-prep-cleanup-20260729_112827\第三套\模块C_缺陷记录表-参考答案 (修复的).docx
+MOVE 02_样题\第三套\2D_PCB6_2026-07-215.png -> 05_归档备份\sample-prep-cleanup-20260729_112827\第三套\2D_PCB6_2026-07-215.png
+README written: 第三套
+MOVE 02_样题\第四套\印制电路制作工赛项_竞赛样题（完整版）.docx -> 02_样题\第四套\01_样题\印制电路制作工赛项_竞赛样题（完整版）.docx
+MOVE 02_样题\第四套\模块C_缺陷记录表-参考答案.docx -> 02_样题\第四套\03_结果呈现_参考答案\模块C_缺陷记录表-参考答案.docx
+MOVE 02_样题\第四套\模块D_检测记录表_参考答案.docx -> 02_样题\第四套\03_结果呈现_参考答案\模块D_检测记录表_参考答案.docx
+MOVE 02_样题\第四套\模块C_缺陷记录表.docx -> 02_样题\第四套\04_需填写内容\模块C_缺陷记录表.docx
+MOVE 02_样题\第四套\模块C_PCB制程工艺卡.docx -> 02_样题\第四套\04_需填写内容\模块C_PCB制程工艺卡.docx
+MOVE 02_样题\第四套\学生组_模块D_检测记录表.docx -> 02_样题\第四套\04_需填写内容\学生组_模块D_检测记录表.docx
+MOVE 02_样题\第四套\模块B.eprj2 -> 02_样题\第四套\05_U盘资料\模块B.eprj2
+MOVE 02_样题\第四套\模块C.zip -> 02_样题\第四套\05_U盘资料\模块Cgerber.zip
+MOVE 02_样题\第四套\00_README_阶段1.md -> 02_样题\第四套\99_命题规格\00_README_阶段1.md
+MOVE 02_样题\第四套\00_命题边界确认表.md -> 02_样题\第四套\99_命题规格\00_命题边界确认表.md
+MOVE 02_样题\第四套\00_工程回填清单.md -> 02_样题\第四套\99_命题规格\00_工程回填清单.md
+MOVE 02_样题\第四套\模块B_半成品工程规格.md -> 02_样题\第四套\99_命题规格\模块B_半成品工程规格.md
+MOVE 02_样题\第四套\模块C_缺陷规格_12处.md -> 02_样题\第四套\99_命题规格\模块C_缺陷规格_12处.md
+MOVE 02_样题\第四套\模块D_缺陷规格_D01-D08_AB.md -> 02_样题\第四套\99_命题规格\模块D_缺陷规格_D01-D08_AB.md
+README written: 第四套
+MOVE 02_样题\02_样题.zip -> 05_归档备份\sample-prep-cleanup-20260729_112827\02_样题_root\02_样题.zip
+MOVE 03_脚本与方案\_generated\module_c_ref_ans.txt -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\module_c_ref_ans.txt
+MOVE 03_脚本与方案\_generated\set1_full_now.txt -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\set1_full_now.txt
+MOVE 03_脚本与方案\_generated\set1_full_para_index.txt -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\set1_full_para_index.txt
+MOVE 03_脚本与方案\_generated\set1_full_tables.txt -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\set1_full_tables.txt
+MOVE 03_脚本与方案\_generated\set2_full_now.txt -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\set2_full_now.txt
+MOVE 03_脚本与方案\_generated\build_sample_set2_phase1_20260723.py -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\build_sample_set2_phase1_20260723.py
+MOVE DIR 03_脚本与方案\_generated\module_c_check_zip -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\module_c_check_zip
+MOVE DIR 03_脚本与方案\_generated\module_c_gerber_inspect -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\module_c_gerber_inspect
+MOVE DIR 03_脚本与方案\_generated\review_as_real_exam -> 05_归档备份\sample-prep-cleanup-20260729_112827\03_generated\review_as_real_exam
+MOVE _tmp_0721_extract.txt -> 05_归档备份\sample-prep-cleanup-20260729_112827\project_root\_tmp_0721_extract.txt

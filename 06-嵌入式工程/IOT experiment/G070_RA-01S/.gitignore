@@ -1,0 +1,21 @@
+# Build directories
+cmake-build-debug-llvm/
+cmake-build-release-llvm/
+bin/
+obj/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.bak
+
+# Firmware artifacts
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+
+# Log files
+*.log

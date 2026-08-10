@@ -1,0 +1,17 @@
+# IAR build output
+**/Exe/
+**/Obj/
+**/List/
+*.dep
+*.ewd
+*.pbi
+*.pbi.xcl
+*.r51
+*.d51
+*.sim
+*.hex
+*.a
+*.lib
+*.lst
+*.s51
+*.map

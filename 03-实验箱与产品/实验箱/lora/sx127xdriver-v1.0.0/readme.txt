@@ -1,0 +1,2 @@
+这个是移植semtech官方的ping-pong例程到stm32f103c8开发板上的demo
+实现了ping-pong通信

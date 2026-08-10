@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <!-- <meta name="referrer" content="no-referrer"> -->
+    <!-- <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" /> -->
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="wpk-bid" content="dta_2_93916" />
+    <script src="https://g.alicdn.com/dingding/dinglogin/0.0.5/ddLogin.js"></script>
+    <!-- <script>
+    !(function (c, i, e, b) {
+      var h = i.createElement("script");
+      var f = i.getElementsByTagName("script")[0];
+      h.type = "text/javascript";
+      h.crossorigin = true;
+      h.onload = function () {
+        c[b] || (c[b] = new c.wpkReporter({ bid: "dta_2_93916" }));
+        c[b].installAll()
+      };
+      f.parentNode.insertBefore(h, f);
+      h.src = e
+    })(window, document, "https://g.alicdn.com/woodpeckerx/jssdk??wpkReporter.js", "__wpk");
+  </script> -->
+    <meta name="wpk-bid" content="dta_2_91963" />
+    <script>
+      var isDingtalk = navigator && /DingTalk/.test(navigator.userAgent);
+      var isProductEnv =
+        window &&
+        window.location &&
+        window.location.host &&
+        window.location.host.indexOf("ai.wopeiwang.com") === 0 &&
+        window.location.host.indexOf("[REDACTED_IP]") === -1 &&
+        window.location.host.indexOf("localhost") === -1 &&
+        window.location.host.indexOf("192.168.") === -1 &&
+        window.location.host.indexOf("wozp.cn") === -1;
+      // 如果有其它测试域名，请一起排掉，减少测试环境对生产环境监控的干扰
+      if (isProductEnv) {
+        !(function (c, i, e, b) {
+          var h = i.createElement("script");
+          var f = i.getElementsByTagName("script")[0];
+          h.type = "text/javascript";
+          h.crossorigin = true;
+          h.onload = function () {
+            c[b] || (c[b] = new c.wpkReporter({ bid: "dta_2_91963" }));
+            c[b].installAll();
+          };
+          f.parentNode.insertBefore(h, f);
+          h.src = e;
+        })(
+          window,
+          document,
+          "https://g.alicdn.com/woodpeckerx/jssdk??wpkReporter.js",
+          "__wpk"
+        );
+      }
+    </script>
+    <script>
+      // 在钉钉小程序环境中
+      const ua = navigator.userAgent.toLowerCase();
+      if (ua.includes("dingtalk")) {
+        if (ua.includes("dd-web") || ua.includes("miniprogram")) {
+          // 引入钉钉小程序webview
+          document.writeln(
+            '<script src="https://appx/web-view.min.js"' +
+              ">" +
+              "<" +
+              "/" +
+              "script>"
+          );
+          // 网页向小程序 postMessage 消息
+          dd.postMessage({ status: "success" });
+        }
+      }
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://static.zpimg.cn/public/swiper.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://g.alicdn.com/apsara-media-box/imp-web-player/2.35.1/skins/default/aliplayer-min.css"
+    />
+    <script>
+      window.routerBase = "/";
+    </script>
+    <script>
+      //! umi version: 3.5.43
+    </script>
+    <script src="https://map.qq.com/api/gljs?v=1.exp&amp;libraries=service&amp;key=PUZBZ-Y76KU-6HEVH-GLRFG-TPRWV-EXBJI"></script>
+  </head>
+
+  <body>
+    <script>
+      const getColorHref = () => {
+        return window.publicPath + "color.less";
+      };
+
+      !(function (window) {
+        this.icons = document.getElementById("webIcons");
+        if (this.icons === null) {
+          this.icons = document.createElement("script");
+          this.icons.charset = "utf-8";
+          this.icons.src =
+            "https://static.zpimg.cn/public/career/iconfont/iconfont9.js?v=" +
+            Math.floor(Math.random() * 1000000000);
+          // this.icons.src = 'https://static.zpimg.cn/public/career/iconfont_career_pc.js?v=' +
+          //   Math.floor(Math.random() * 1000000000)
+          this.icons.id = "webIcons";
+          let s = document.getElementsByTagName("head")[0];
+          s.appendChild(this.icons);
+        }
+      })(window);
+    </script>
+    <div id="version" style="display: none"></div>
+    <script
+      charset="utf-8"
+      type="text/javascript"
+      src="https://g.alicdn.com/apsara-media-box/imp-web-player/2.35.1/aliplayer-min.js"
+    ></script>
+    <script src="https://edu-cms.nosdn.127.net/topics/js/eduPlayer-2024-05-24.all.min_57f5a6f3bfcc8dd234ed568427301696.js"></script>
+    <script src="https://static.zpimg.cn/public/career/video/aliplayercomponents-1.0.5.js"></script>
+    <script src="https://static.zpimg.cn/public/less_2.7.3/less.min.js"></script>
+
+    <script>
+      // 钉钉环境不支持加载 qiyukf
+      if (!navigator.userAgent.toLowerCase().includes("dingtalk")) {
+        (function (w, d, n, a, j) {
+          w[n] =
+            w[n] ||
+            function () {
+              (w[n].a = w[n].a || []).push(arguments);
+            };
+          j = d.createElement("script");
+          j.async = true;
+          j.src =
+            "https://qiyukf.com/script/6678a159c701ad9647a6dc57bfacf81a.js?hidden=1";
+          d.body.appendChild(j);
+        })(window, document, "ysf");
+      }
+    </script>
+    <script>
+      window.onload = function () {
+        //判断是否是IE浏览器，或360兼容模式
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+          var rootDom = document.getElementById("gateway-master");
+          var versionDom = document.getElementById("version");
+          if (rootDom) {
+            rootDom.style.display = "none";
+          }
+          versionDom.innerHTML =
+            '<div class="lowVersion"><div class="lowVersion_wrap"><div class="lowVersion_tip"><img src="https://static.zpimg.cn/public/career/version_err.png"alt=""/><p>浏览器版本过低，请升级或更换浏览器</p></div><p class="title">建议使用以下浏览器</p><div class="browser_box"><div class="browser_item"><img src="https://static.zpimg.cn/public/career/browser1.png"alt=""/><p>Google Chrome</p><span>版本V30.0及以上</span></div><div class="browser_item"><img src="https://static.zpimg.cn/public/career/browser2.png"alt=""/><p>火狐</p><span>版本V18.0及以上</span></div><div class="browser_item"><img src="https://static.zpimg.cn/public/career/browser4.png"alt=""/><p>Edge</p><span>版本V12.0及以上</span></div><div class="browser_item"><img src="https://static.zpimg.cn/public/career/browser5.png"alt=""/><p>360</p><span class="browser_item_360text"><img src="https://static.zpimg.cn/public/career/browser5_icon.png"alt=""/>极速模式</span></div><div class="browser_item"><img src="https://static.zpimg.cn/public/career/browser6.png"alt=""/><p>Safari</p><span>版本V8.0及以上</span></div></div></div></div>';
+          versionDom.style.display = "block";
+        }
+      };
+    </script>
+
+    <div id="gateway-master"></div>
+    <script
+      src="https://static.zpimg.cn/master/career-fe-pc-gateway/umi.1e4577a8.js"
+      entry=""
+    ></script>
+  </body>
+</html>

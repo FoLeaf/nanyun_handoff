@@ -1,0 +1,315 @@
+---PAGE 1---
+Introduction
+The STMod+ interface specification describes all the electrical and mechanical elements, necessary for use of the STMod+
+connector in a design.
+This connector enables the use of low-cost and small-form-factor daughterboards in STM32 board ecosystems.
+The principle is to provide a set of standard interfaces such as SPI, UART, I2C and other functions such as RESET,
+INTERRUPT, ADC, PWM and general purpose I/Os.
+All signals are multiplexed on a low-cost family of interface connectors. The connector pitch is 2 mm.
+The host side (microcontroller of the main board) provides a female connector with 20 pins (2 rows × 10 pins). The
+daughterboard side is equipped with the corresponding male connector.
+The host-interface signals are 3.3 V compatible. +5 V power supply and ground pins are present on each row of the connector.
++5 V pins are used to power the daughterboard from the host. Nevertheless, some daughterboards may be used as +5 V power
+sources for host boards supporting this configuration.
+Before plugging STMod+ daughterboards into a host, the user must check whether specific hardware configurations are
+necessary for functional compatibility. The host board and daughterboard user manuals are available for this purpose on the
+STMicroelectronics website at www.st.com .
+The following host boards from STMicroelectronics are compatible with the STMod+ interface connection:
+•32F723EDISCOVERY
+•STM32F7308-DK  (obsolete)
+•B-L462E-CELL1
+•32L496GDISCOVERY
+•P-L496G-CELL01  (obsolete)
+•P-L496G-CELL02
+•STM32L4P5G-DK
+•32L4R9IDISCOVERY
+•STM32L552E-EV
+•STM32L562E-DK
+•STM32H735G-DK
+•STM32H745I-DISCO
+•STM32H747I-DISCO
+•STM32H750B-DK
+•STM32H7B3I-DK
+•B-U585I-IOT02A
+•STM32WB5MM-DKSTMod+ interface specificationTN1238
+Technical note
+TN1238  - Rev 3  - October 2021
+For further information contact your local STMicroelectronics sales office.www.st.com
+---PAGE 2---
+1 Description of the STMod+ signals for the host interface
+According to the board constraints, some signals of the STMod+ interface may be shared with other host board
+functions. All signals are 3.3 V compatible and some signals may be 5 V tolerant.
+Refer to Table 1 : x, y and z stand for a bus number identifier on the STM32 and bus numbers can be different
+from one host board to another. For detailed information, refer to the user manual of the host board and to
+the corresponding datasheet of the Arm® Cortex®-based STM32 microcontroller available on the www.st.com
+website.
+Table 1. Pin assignment and description
+STMod+ pin number Function(1) of the primary host mapped Description
+1 SPIx_NSS(2) / UARTy_CTS Output / Input
+2 SPIx_MOSIp(3) / UARTy_TX Output / Output
+3 SPIx_MISOp(4) / UARTy_RX Input / Input
+4 SPIx_SCK / UARTy_RTS Output / Output
+5 GND Ground reference
+6 +5 V Power supply(5)
+7 I2Cz_SCL Input / Output
+8 SPIx_MOSIs(3) Output
+9 SPIx_MISOs(4) Input / Output
+10 I2Cz_SDA Input / Output
+11 INT(6) Input
+12 RESET Output
+13 ADC Input
+14 PWM Output
+15 +5 V Power supply(5)
+16 GND Ground reference
+17 GPIO(7) Input / Output
+18 GPIO(7) Input / Output
+19 GPIO(7) Input / Output
+20 GPIO(7) Input / Output
+ 
+1. In case two functions are provided on an STMod+ connector pin, it is allowed to connect two different I/O ports from STM32:
+firmware manages the conflicts that may raise. MOSIs means used in Serial Daisy Chained-SPI mode and MOSIp means
+used in Parallel SPI mode. More alternate functions may be available from STM32. Refer to the user manual of the host
+board and the corresponding STM32 datasheet available on the www.st.com  website.
+2. Instead of SPIx_NSS, a GPIO can be used as SPI Chip Select.
+3. Pins 2 and 8 are the same SPIx_MOSI signals, but they must come from two different I/O ports.
+4. Pins 3 and 9 are the same SPIx_MISO signals, but they must come from two different I/O ports.
+5. Power supply is output or input, depending on host board / daughterboard configuration.
+6. INT is an interrupt line.
+7.GPIO ports with many alternate functions (as UART, I2C, SPI and analog inputs/outputs) are privileged to offer optimum
+flexibility.
+ 
+Note: Arm is a registered trademark of Arm Limited (or its subsidiaries) in the US and/or elsewhere.TN1238
+Description of the STMod+ signals for the host interface
+TN1238  - Rev 3 page 2/12
+---PAGE 3---
+2 Description of the STMod+ connectors
+2.1 Recommended connector references
+There are two different types of STMod+ connectors:
+• Female: STMod+ connector for host board
+• Male: STMod+ connector for daughterboard
+They are both 20-pin connectors (2 rows × 10 pins) with 2 mm pitch contacts.
+Manufacturer part number examples of right-angle connectors to be used are:
+• Female: SQT-110-01-F-D-RA (from SAMTEC) or FH200210C-12000 (from ATOM®)
+• Male: TMM-110-01-L-D-RA (from SAMTEC) or PH200210C-07000 (from ATOM®)
+For detailed mechanical specification of both connectors, refer to the relevant supplier datasheets.
+2.2 Connector placement
+Figure 1  shows an example of a daughterboard and host board placement of both connectors (right-angle
+connectors mounted on top side):
+Figure 1. Example of placement for daughterboard and host board (top view)
+Host board
+Daughterboard
+MaleFemaleTN1238
+Description of the STMod+ connectors
+TN1238  - Rev 3 page 3/12
+---PAGE 4---
+Figure 2  shows the physical location of the pins versus mechanical placement for right-angle connectors.
+The black-plastic-molded part of the connector must be placed just at the border all along the edge of the PCB as
+showed in Figure 2 : the top row shows pins 1 to 10, and the bottom row shows pins 11 to 20.
+The distance between the center of the pads and the PCB edge border is indicated in Figure 2  in millimeters.
+Figure 2. PCB top view
+20
+PCB
+edge 
+borderDaughterboard Host board
+19
+18
+17
+16
+15
+14
+13
+12
+1110
+9
+8
+7
+6
+5
+4
+3
+2
+120
+19
+18
+17
+16
+15
+14
+13
+12
+1110
+9
+8
+7
+6
+5
+4
+3
+2
+1
+PCB
+edge 
+border
+7.62 mm 2.77 mmMale connector Female connector
+Figure 3  shows the PCB side view of the connectors.
+Figure 3. PCB side view
+1 2 3 4 5 6 7 8 910
+11 12 13 14 15 16 17 18 19 2010 9 8 7 6 5 4 3 2 1
+20 19 18 17 16 15 14 13 12 11
+TopDaughterboard
+BottomHost board
+When placing a connector on the host board, the board designer must pay attention that no mechanical
+interference (like components or connectors) prevents the daughterboard plug-in.TN1238
+Connector placement
+TN1238  - Rev 3 page 4/12
+---PAGE 5---
+2.3 Marking or labeling of the connectors
+Since none of the two connectors are keyed, it is mandatory to implement a PCB marking of pins 1, 10, 11 and 20
+on the host board and on the daughterboard, to prevent insertion in the wrong orientation. This marking is present
+on both sides of the PCB and must be clearly visible.
+If there is enough space on the host board, board designers may indicate the I/O port number allocation
+corresponding to each pin of the connectors by means of a table description. It is also required to have the
+“STMod+”  board marking close to the connector (on the top side).
+Figure 4  and Figure 5  show an example of a top and bottom side marking for a right-angle connector mounted on
+top side of a host board.
+Figure 4. Top side marking
+ Figure 5. Bottom side marking
+Caution: As STMod+ connectors do not have mechanical keying, users must plug very carefully the connectors together.
+In case of pin misalignment or row inversion, it is possible to damage boards definitively.
+Note: To avoid wrong connection between an STMod+ host and any daughterboard, handle the two boards with both
+STMod+ connectors visible on their mounted side, then align and plug them tightly. Check that the pin numbers
+are symmetric on both boards (see Figure 1 ).TN1238
+Marking or labeling of the connectors
+TN1238  - Rev 3 page 5/12
+---PAGE 6---
+3 STMod+ electrical interface description
+As the STMod+ connector provides alternate signals on same pins, electrical AC interface characteristics can
+be different according to the function used, such as max in/out current, allowable capacitive load, maximum
+frequency, maximum rising/falling edges, need for line impedance, and others.
+For more details about the I/O electrical AC characteristics, refer to the host STM32 datasheet of the host board,
+available on the www.st.com  website.
+Generic DC characteristics regarding these pins are described in Section  3.1   and Section  3.2  .
+3.1 DC characteristics for the STMod+ signal pins
+VDD digital and analog pins reference voltage is 3.3 V typical. As a host may support other characteristics,
+for further details always refer to the host board user manual and to the host microcontroller datasheet on the
+www.st.com  website.
+3.1.1 Input characteristics
+All pins are compliant with CMOS and TTL input levels. Input characteristics are listed in Table 2 .
+Table 2. Input characteristics
+Input levels CMOS TTL
+VIL max 0.3 × V DD 0.8 V
+VIh min 0.7 × V DD 2 V
+3.1.2 Output characteristics
+All pins are TTL and CMOS output compatible with JEDEC standards JESD36 and JESD52. Output
+characteristics are listed in Table 3 .
+Table 3. Output characteristics
+Output levels for I = +8 / -8 mA CMOS TTL
+Voh min VDD - 0.4 V 2.4 V
+Vol max 0.4 V 0.4 V
+Depending on host, some pins can even support higher current sourcing or sinking, for detailed characteristics
+refer to the microcontroller datasheet on the www.st.com  website.
+3.2 STMod+ power pins
+The +5 V power supply pins can be used in two configurations:
+• Power source from the host board to the daughterboard (main configuration)
+• Power source from the daughterboard to the host board
+The +5 V power supply pins deliver a +5 V ± 10% voltage with a current in the range of 100 mA to 200 mA when
+the source is the host board. When the power source is the daughterboard, the current sourcing capability must
+be in the range of 200 mA to 500 mA. Depending on the configuration of the host board and on the daughterboard
+used, greater or lower current could be supported.
+To determine the necessary hardware configuration and the minimum amount of current source, refer to the user
+manuals of the host board and daughterboard available on the www.st.com  website.TN1238
+STMod+ electrical interface description
+TN1238  - Rev 3 page 6/12
+---PAGE 7---
+4 STMod+ daughterboard design guide
+Daughterboards must feature an I2C EEPROM populated and set to respond to 0xAC/AD or 0xBC/BD slave
+addresses. This EEPROM is used to perform automatic board identification by the host firmware.
+Table 4  illustrates the case of an EEPROM with a 32-Kbyte user space and a separate extra 64-byte OTP
+(one-time programmable) page, of which the first 16 bytes are the ASCII-NULL-terminated board ID string, for
+example a cellular daughterboard.
+Table 4. EEPROM contents example
+EEPROM sub-address Parameter namme Details Example
+0x00 to 0x0F Product ID 15 characters + NULL B-CELL-UG96
+0x10 to 0x1F Application specific 16 characters SIM voucher
+0x20 to 0x2F Application specific 16 characters -
+0x30 to 0x3F Product revision 16 characters MB1329B01
+0x40 to 0xXX Application specific - -
+The sub-address 0x00 to 0x0F is mandatory and common to all plug-and-play boards. The other fields are
+daughterboard specific. They are defined by the board manufacturer providing the software driver for it along with
+the hardware board.TN1238
+STMod+ daughterboard design guide
+TN1238  - Rev 3 page 7/12
+---PAGE 8---
+Revision history
+Table 5. Document revision history
+Date Revision Changes
+6-Apr-2017 1 Initial release.
+16-Oct-2017 2 Updated document title. Added compatibility with 32L4R9IDISCOVERY.
+14-Oct-2021 3Added compatibility with
+• B-L462E-CELL1
+• STM32F7308-DK  (obsolete)
+• P-L496G-CELL01  (obsolete)
+• P-L496G-CELL02
+• STM32L4P5G-DK
+• STM32L552E-EV
+• STM32L562E-DK
+• STM32H735G-DK
+• STM32H745I-DISCO
+• STM32H747I-DISCO
+• STM32H750B-DK
+• STM32H7B3I-DK
+• B-U585I-IOT02A
+• STM32WB5MM-DK
+Added STMod+ daughterboard design guide  and updated STMod+ power
+pins.TN1238
+TN1238  - Rev 3 page 8/12
+---PAGE 9---
+Contents
+1 Description of the STMod+ signals for the host interface ........................... 2
+2 Description of the STMod+ connectors ............................................. 3
+2.1 Recommended connector references .............................................. 3
+2.2 Connector placement ........................................................... 3
+2.3 Marking or labeling of the connectors .............................................. 5
+3 STMod+ electrical interface description ............................................ 6
+3.1 DC characteristics for the STMod+ signal pins ...................................... 6
+3.1.1 Input characteristics ...................................................... 6
+3.1.2 Output characteristics ..................................................... 6
+3.2 STMod+ power pins ............................................................ 6
+4 STMod+ daughterboard design guide .............................................. 7
+Revision history ........................................................................ 8
+List of tables .......................................................................... 10
+List of figures .......................................................................... 11TN1238
+Contents
+TN1238  - Rev 3 page 9/12
+---PAGE 10---
+List of tables
+Table 1.  Pin assignment and description .......................................................... 2
+Table 2.  Input characteristics .................................................................. 6
+Table 3.  Output characteristics ................................................................. 6
+Table 4.  EEPROM contents example ............................................................ 7
+Table 5.  Document revision history .............................................................. 8TN1238
+List of tables
+TN1238  - Rev 3 page 10/12
+---PAGE 11---
+List of figures
+Figure 1.  Example of placement for daughterboard and host board (top view) ............................... 3
+Figure 2.  PCB top view ..................................................................... 4
+Figure 3.  PCB side view .................................................................... 4
+Figure 4.  Top side marking .................................................................. 5
+Figure 5.  Bottom side marking ................................................................ 5TN1238
+List of figures
+TN1238  - Rev 3 page 11/12
+---PAGE 12---
+IMPORTANT NOTICE – PLEASE READ CAREFULLY
+STMicroelectronics NV and its subsidiaries (“ST”) reserve the right to make changes, corrections, enhancements, modifications, and improvements to ST
+products and/or to this document at any time without notice. Purchasers should obtain the latest relevant information on ST products before placing orders. ST
+products are sold pursuant to ST’s terms and conditions of sale in place at the time of order acknowledgement.
+Purchasers are solely responsible for the choice, selection, and use of ST products and ST assumes no liability for application assistance or the design of
+Purchasers’ products.
+No license, express or implied, to any intellectual property right is granted by ST herein.
+Resale of ST products with provisions different from the information set forth herein shall void any warranty granted by ST for such product.
+ST and the ST logo are trademarks of ST. For additional information about ST trademarks, please refer to www.st.com/trademarks . All other product or service
+names are the property of their respective owners.
+Information in this document supersedes and replaces information previously supplied in any prior versions of this document.
+© 2021 STMicroelectronics – All rights reservedTN1238
+TN1238  - Rev 3 page 12/12

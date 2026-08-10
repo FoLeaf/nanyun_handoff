@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    width: 1600px;
+    height: 940px;
+    background: #ffffff;
+    color: #111111;
+    font-family: "Microsoft YaHei", "SimHei", "SimSun", sans-serif;
+  }
+  .canvas {
+    width: 1600px;
+    height: 940px;
+    padding: 54px 70px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+  .chart-title {
+    font-family: "SimHei", "Microsoft YaHei", sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    letter-spacing: 0;
+  }
+  .chart-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-top: 8px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid #222;
+  }
+  .accent-line {
+    height: 4px;
+    width: 90px;
+    background: linear-gradient(90deg, #075FBF, #D98200);
+    margin-top: 12px;
+  }
+  .body { position: relative; height: 760px; margin-top: 34px; }
+  .box {
+    position: absolute;
+    border: 2px solid #777;
+    background: #fff;
+    color: #111;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.45;
+  }
+  .box .k { font-size: 23px; font-weight: 700; color: #000; }
+  .box .v { font-size: 18px; color: #222; margin-top: 7px; }
+  .box.light { background: #f8f8f8; }
+  .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+  .blue-rule { border-top: 5px solid #075FBF; }
+  .orange-rule { border-top: 5px solid #D98200; }
+  .thin { border-color: #aaa; }
+  svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; }
+  .note {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    bottom: 22px;
+    padding: 18px 24px;
+    border-left: 5px solid #111;
+    background: #f8f8f8;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #111;
+  }
+  .mini {
+    position: absolute;
+    border: 1.6px solid #999;
+    background: #fff;
+    padding: 10px 12px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+  .grid-label { font-weight: 700; font-size: 20px; }
+  .room { position:absolute; border: 3px solid #111; background:#fff; }
+  .desk { position:absolute; border:1.5px solid #777; background:#f9f9f9; text-align:center; font-size:15px; line-height:1.2; display:flex; align-items:center; justify-content:center; }
+  .lane {
+    position: absolute;
+    border: 1.8px solid #8a8a8a;
+    background: #fff;
+    padding: 16px 18px;
+    font-size: 18px;
+    line-height: 1.42;
+  }
+  .lane-title {
+    font-family: "SimHei", "Microsoft YaHei", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #cfcfcf;
+  }
+  .chip {
+    display: inline-block;
+    margin: 5px 4px;
+    padding: 6px 10px;
+    border: 1.4px solid #999;
+    background: #fafafa;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .port {
+    position: absolute;
+    width: 74px;
+    height: 48px;
+    border: 1.6px solid #777;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+  }
+</style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="chart-title">实训室网络拓扑图</div>
+    <div class="chart-subtitle">千兆有线、无线接入、边缘网关与平台服务器统一部署</div>
+    <div class="accent-line"></div>
+    <div class="body"><svg viewBox="0 0 1460 760">
+      <defs><marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#333"/></marker></defs>
+      <line x1="725" y1="125" x2="725" y2="190" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="725" y1="280" x2="725" y2="345" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="560" y1="390" x2="360" y2="390" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="890" y1="390" x2="1090" y2="390" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="650" y1="430" x2="470" y2="560" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="725" y1="430" x2="725" y2="560" stroke="#333" stroke-width="3" marker-end="url(#arrow)" /><line x1="800" y1="430" x2="1050" y2="560" stroke="#333" stroke-width="3" marker-end="url(#arrow)" />
+    </svg><div class="box blue-rule" style="left:610px;top:55px;width:230px;height:70px;"><div class="k">互联网 / 校内网</div><div class="v"></div></div><div class="box orange-rule" style="left:590px;top:190px;width:270px;height:90px;"><div class="k">防火墙 / 路由器</div><div class="v"></div></div><div class="box blue-rule" style="left:590px;top:345px;width:270px;height:90px;"><div class="k">核心交换机</div><div class="v"></div></div><div class="box orange-rule" style="left:1070px;top:345px;width:320px;height:95px;"><div class="k">AIoT平台服务器</div><div class="v">数据备份存储</div></div><div class="box orange-rule" style="left:80px;top:345px;width:320px;height:95px;"><div class="k">教师管理终端</div><div class="v">投屏 / 大屏</div></div><div class="box blue-rule" style="left:235px;top:560px;width:270px;height:95px;"><div class="k">无线AP</div><div class="v"></div></div><div class="box orange-rule" style="left:575px;top:560px;width:300px;height:95px;"><div class="k">25组学生工位</div><div class="v">实验箱 / PC</div></div><div class="box blue-rule" style="left:1010px;top:560px;width:330px;height:95px;"><div class="k">边缘网关</div><div class="v">触控看板</div></div></div>
+  </div>
+</body>
+</html>

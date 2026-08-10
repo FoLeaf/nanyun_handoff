@@ -1,0 +1,6 @@
+if BOARD_CUSTOM_G070CB
+
+config BOARD
+	default "custom_g070cb"
+
+endif
